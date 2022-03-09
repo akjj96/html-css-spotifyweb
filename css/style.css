@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.dubug {
+    border: 1px solid white;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.wrapper {
+    height: 100vh;
+    width: 100%;
+}
+/* #region || TEXT FORMAT ||*/
+a {
+    color: white;
+    text-decoration: none;
+}
+nav.content a, h4 {
+    color: #7D7F84;
+}
+h3 {
+    padding: 4%;
+    font-size: 15px;
+}
+h4 {
+    font-size: 13px;
+}
+ul {
+    list-style-type: none;
+}
+.text-white {
+    color: white;
+}
+
+/* #endregion */
+
+
+/* Elenco effetti da mettere: 
+Home attivo, tutti i vari elementi cliccabili si devono illuminare quando si va sopra col mouse. Il bottone Effettua Upgrade si deve ingrandire. Alle playlist sull'hover deve comparire il coso con il simbolo play. Alla barra sotto dei minuti della canzone, con hover diventa verde e appare il pallino del "fino a dove si è arrivati", stessa cosa vol volume  */
+
+
+/* #region || WRAPPER CONTENT ||*/
+.wrapper-content {
+    width: 100%;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* #region || ASIDE ||*/
+aside {
+    width: 230px;
+}
+aside a {
+    color: #7D7F84;
+}
+.aside-container {
+    padding: 25px;
+    height: 100%;
+}
+/* #region || ASIDE TOP ||*/
+.aside-top {
+    height: calc(100% - 60px);
+}
+.aside-top>img { /* Logo */
+    width: 150px;
+    padding-bottom: 8px;
+}
+.aside-top ul {
+    padding-bottom: 20px;
+}
+.aside-top ul li {
+    padding: 10px 0;  
+}
+.aside-top a {
+    display: flex;
+    align-items: center;
+}
+.aside-top ul img {
+    width: 30px;
+    margin-right: 8px;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    background-color: #7D7F84;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1;
+    margin-right: 8px;
+}
+.playlist-list {
+    overflow-y: auto;
+    height: 63%;
+}
+
+.aside-top-xs {
+    display: none;
+}
+.aside-bottom-xs {
+    display: none;
+}
+/* #endregion ASIDE TOP*/
+
+/* #region || ASIDE BOTTOM ||*/
+.aside-bottom {
+    height: 90px;
+    background-color: black;
+    position: relative;
+    z-index: 2;
+}
+.aside-bottom h4 {
+    padding: 10px 0;
+    border-bottom: 1px solid #7D7F84;
+    line-height: 0.1px;
+}
+.aside-bottom h4 img {
+    width: 18px;
+    margin-right: 10px;
+    transform: translateY(4px);
+}
+.aside-bottom h3 img {
+    width: 25px;
+    height: 25px;
+    background-color: #7D7F84;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.aside-bottom h3 {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+/* #endregion ASIDE BOTTOM*/
+
+/* #region || ASIDE XS ||*/
+.aside-top-xs {
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 10px;
+    height: calc(100% - 60px);
+}
+.aside-top-xs img {
+    width: 20px;
+}
+.aside-top-xs img:first-child {
+    width: 25px;
+}
+.aside-bottom-xs {
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 10px;
+}
+.aside-bottom-xs a img {
+    width: 20px;
+}
+.circle {
+    width: 25px;
+    height: 25px;
+    background-color: #7D7F84;
+    border-radius: 50%;
+}
+/* #endregion ASIDE XS*/
+
+/* #endregion ASIDE*/
+
+/* #region || MAIN ||*/
+main {
+    width: calc(100% - 230px);
+    height: 100%;
+    background-color: #141922;
+}
+/* #region || NAV TOP ||*/
+
+nav.top {
+    width: calc(100% - 230px);
+    height: 90px;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+    vertical-align: bottom;
+    padding-top: 35px;
+}
+nav.top .btn {
+    font-size: 14px;
+    padding: 10px 35px;
+    margin-right: 40px;
+    border: 1px solid white;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+/* #endregion NAV TOP*/
+
+.main-content {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    padding-top: 90px;
+}
+
+/* #region || NAV CONTENT ||*/
+nav.content {
+    text-transform: uppercase;
+    text-align: center;
+}
+nav.content li {
+    display: inline-block;
+    padding-right: 1.5%;
+    padding-top: 1%;
+    font-size: 22px;
+}
+/* #endregion NAV CONTENT*/
+section {
+    padding: 2% 2% 0% 2%;
+}
+.card-container {
+    padding: 2% 0% 0%;
+    display: flex;
+}
+.card {
+    width: calc(100% / 6);
+    text-align: center;
+    margin-right: 1%;
+}
+.card img{
+    width: 100%;
+}
+.circle-img {
+    border-radius: 50%;
+}
+.card-img {
+    position: relative;
+}
+
+
+/* #endregion MAIN*/
+/* #endregion WRAPPER CONTENT*/
+
+/* #region || FOOTER ||*/
+footer {
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #2B262A;
+    z-index: 2;
+}
+.player-bar {
+    display: flex;
+    flex-flow: row nowrap;    
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+}
+.player-left, .player-center, .player-right {
+    width: calc(100% / 3);
+}
+/* #region || PLAYER LEFT ||*/
+.player-left {
+    display: flex;
+    align-items: center;
+    color: #7D7F84;
+}
+.player-left img {
+    width: 8%;
+    min-width: 50px;
+    min-height: 50px;

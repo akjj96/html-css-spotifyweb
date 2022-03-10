@@ -15,14 +15,14 @@
 body {
     background-color: black;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    
     font-weight: bold;
 }
 .wrapper {
     height: 100vh;
     width: 100%;
 }
-/* #region || TEXT FORMAT ||*/
+
 a {
     color: white;
     text-decoration: none;
@@ -44,14 +44,7 @@ ul {
     color: white;
 }
 
-/* #endregion */
 
-
-/* Elenco effetti da mettere: 
-Home attivo, tutti i vari elementi cliccabili si devono illuminare quando si va sopra col mouse. Il bottone Effettua Upgrade si deve ingrandire. Alle playlist sull'hover deve comparire il coso con il simbolo play. Alla barra sotto dei minuti della canzone, con hover diventa verde e appare il pallino del "fino a dove si è arrivati", stessa cosa vol volume  */
-
-
-/* #region || WRAPPER CONTENT ||*/
 .wrapper-content {
     width: 100%;
     height: calc(100% - 90px);
@@ -59,7 +52,7 @@ Home attivo, tutti i vari elementi cliccabili si devono illuminare quando si va 
     flex-flow: row nowrap;
 }
 
-/* #region || ASIDE ||*/
+
 aside {
     width: 230px;
 }
@@ -70,7 +63,7 @@ aside a {
     padding: 25px;
     height: 100%;
 }
-/* #region || ASIDE TOP ||*/
+
 .aside-top {
     height: calc(100% - 60px);
 }
@@ -114,9 +107,7 @@ aside a {
 .aside-bottom-xs {
     display: none;
 }
-/* #endregion ASIDE TOP*/
 
-/* #region || ASIDE BOTTOM ||*/
 .aside-bottom {
     height: 90px;
     background-color: black;
@@ -145,9 +136,7 @@ aside a {
     align-items: center;
     padding: 15px 0;
 }
-/* #endregion ASIDE BOTTOM*/
 
-/* #region || ASIDE XS ||*/
 .aside-top-xs {
     flex-flow: column wrap;
     align-items: center;
@@ -174,17 +163,13 @@ aside a {
     background-color: #7D7F84;
     border-radius: 50%;
 }
-/* #endregion ASIDE XS*/
 
-/* #endregion ASIDE*/
-
-/* #region || MAIN ||*/
 main {
     width: calc(100% - 230px);
     height: 100%;
     background-color: #141922;
 }
-/* #region || NAV TOP ||*/
+
 
 nav.top {
     width: calc(100% - 230px);
@@ -204,7 +189,7 @@ nav.top .btn {
     border-radius: 30px;
     text-transform: uppercase;
 }
-/* #endregion NAV TOP*/
+
 
 .main-content {
     height: 100%;
@@ -213,7 +198,7 @@ nav.top .btn {
     padding-top: 90px;
 }
 
-/* #region || NAV CONTENT ||*/
+
 nav.content {
     text-transform: uppercase;
     text-align: center;
@@ -224,7 +209,7 @@ nav.content li {
     padding-top: 1%;
     font-size: 22px;
 }
-/* #endregion NAV CONTENT*/
+
 section {
     padding: 2% 2% 0% 2%;
 }
@@ -246,12 +231,18 @@ section {
 .card-img {
     position: relative;
 }
+.card i {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55px;
+    filter: opacity(0);
+    margin: 0;
+}
 
 
-/* #endregion MAIN*/
-/* #endregion WRAPPER CONTENT*/
-
-/* #region || FOOTER ||*/
 footer {
     height: 90px;
     width: 100%;
@@ -273,7 +264,7 @@ footer {
 .player-left, .player-center, .player-right {
     width: calc(100% / 3);
 }
-/* #region || PLAYER LEFT ||*/
+
 .player-left {
     display: flex;
     align-items: center;
@@ -283,3 +274,174 @@ footer {
     width: 8%;
     min-width: 50px;
     min-height: 50px;
+}
+.player-info-song {
+    display: inline-block;
+    margin: 0 5% 0 2%;
+    color: white;
+}
+.player-left h5 a {
+    color: #7D7F84;
+}
+
+.player-left i {
+    font-size: 20px;
+    display: inline-block;
+}
+.player-left i:last-child {
+    margin-left: 2vw;
+}
+.dropup-img {
+    position: relative;
+    display: none;
+}
+.dropup-content-img {
+    display: none;
+    position: absolute;
+    bottom: 55px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropup-img:hover .dropup-content-img {
+    display: block;
+}
+
+
+.player-center-icons {
+    font-size: 20px;
+    line-height: 0.4;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
+}
+.fa-circle-play {
+    font-size: 35px;
+    margin: 0 5%;
+}
+.player-center i:first-child {
+    margin-right: 3%;
+}
+.player-center i:last-child {
+    margin-left: 3%;
+}
+.player-center-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+.player-center .grey-bar {
+    width: 80%;
+    background-color: #5A5A5A;
+    display: inline-block;
+}
+.player-center .white-bar {
+    width: 15%;
+    background-color: #C1C1C1;     
+}
+.white-bar, .grey-bar {
+    height: 5px;
+    border-radius: 10px;
+}
+.time {
+    font-size: 10px;
+}
+ 
+.player-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3% ;
+}
+.fa-desktop {
+    margin: 0 1%;
+}
+.player-right .grey-bar {
+    width: 25%;
+    background-color: #5A5A5A;
+    min-width: 90px;
+}
+.player-right .white-bar {
+    background-color: #C1C1C1;
+    width: 20%;
+}
+.dropup-volume {
+    display: none;
+    position: relative;
+}
+.dropup-volume-content {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.grey-bar-dropup {
+    height: 15vh;
+    width: 4px;
+    background-color: #5A5A5A;
+    border-radius: 10px;
+    position: relative;
+}
+.white-bar-dropup {
+    height: 4vh;
+    width: 4px;
+    background-color: #C1C1C1;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.dropup-volume:hover .dropup-volume-content {
+    display: block;
+}
+
+a:hover {
+    color: white;
+}
+li a:hover {
+    color: white;
+}
+.card-img:hover i {
+    display: inline;
+    filter: opacity(1);
+    transition: 0.5s;
+}
+.card-img:hover img {
+    filter: opacity(0.5);
+    transition: 1s;
+}
+nav.top .btn:hover {
+    padding: 15px 45px;
+}
+.player-left-icons i:first-child:hover {
+    color: red;
+}
+.player-left-icons i:last-child:hover {
+    color: #C1C1C1;
+}
+
+
+@media screen and (max-width:992px) {
+    .card-container {
+        flex-flow: row wrap;
+    }
+    .card {
+        width: calc(100% / 4 - 1%);
+        margin-top: 2%;
+    }
+    nav.content li {
+        font-size: 20px;
+        padding-top: 3%;
+    }
+    nav.content ul {
+        padding-top: 2%;
+    }
+}
